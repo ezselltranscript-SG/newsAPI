@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: news-aggregator-api
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: NEWSAPI_KEY
+        sync: false
+      - key: GUARDIAN_KEY
+        sync: false
+      - key: REUTERS_KEY
+        sync: false
+    healthCheckPath: /
+    plan: starter
+    region: oregon
+    numInstances: 1
