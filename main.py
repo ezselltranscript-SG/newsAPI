@@ -17,7 +17,12 @@ app.add_middleware(
 
 # Load settings
 settings = Settings()
-news_aggregator = NewsAggregator(settings.newsapi_key, settings.guardian_key, "")
+news_aggregator = NewsAggregator(
+    newsapi_key=settings.newsapi_key,
+    guardian_key=settings.guardian_key,
+    reuters_key=settings.reuters_key,
+    newsdata_key=settings.newsdata_key
+)
 
 @app.get("/")
 def read_root():

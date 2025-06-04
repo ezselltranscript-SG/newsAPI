@@ -21,9 +21,10 @@ A FastAPI microservice that aggregates news from multiple sources including News
 
 The following environment variables are required:
 
-- `NEWSAPI_KEY`: Your NewsAPI key
+- `NEWSAPI_KEY`: Your NewsAPI.org API key
 - `GUARDIAN_KEY`: Your Guardian API key
 - `REUTERS_KEY`: Your Reuters API key (optional)
+- `NEWSDATA_KEY`: Your NewsData.io API key
 
 ## Local Development
 
