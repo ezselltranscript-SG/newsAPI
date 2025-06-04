@@ -9,4 +9,4 @@ feedparser>=6.0.10
 python-dateutil>=2.8.2
 gunicorn>=20.1.0
 requests>=2.31.0
-newsdataapi>=2.0.0
+newsdataapi>=0.1.23
