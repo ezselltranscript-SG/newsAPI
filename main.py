@@ -24,6 +24,8 @@ def read_root():
     return {"message": "Welcome to News Aggregator API"}
 
 @app.get("/news/latest")
-async def get_latest_news(limit: Optional[int] = 10):
+async def get_latest_news(limit: int = 20):
+    # Aseguramos que el límite no sea menor a 20 ni mayor a 50
+    limit = max(20, min(limit, 50))
     news = await news_aggregator.get_latest_news(limit)
     return {"news": news}
